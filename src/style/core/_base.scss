@@ -22,6 +22,9 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -62,7 +65,7 @@ a {
 ol,
 ul {
   li {
-    padding: 3px 0;
+    padding: 0;
   }
 }
 
@@ -72,16 +75,6 @@ ul {
     // list-style-image: url('../img/ul.png');
   }
 }
-
-//кастомные пункты списка с цифрами
-ol {
-  // list-style: none;
-  // @include counter(li);
-  li::before {
-    // color: $brand;
-  }
-}
-
 input,
 textarea,
 select,
@@ -134,25 +127,10 @@ ol > *:not(li) {
   outline: 5px solid tomato;
 }
 
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
-}
-
 .main-wrap {
   display: flex;
   flex-direction: column;
-  height: 100%;
   min-height: 100vh;
-
-  //свойство для плавной прокрутки на яблоках
-
-  -webkit-overflow-scrolling: touch;
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
@@ -162,32 +140,7 @@ ol > *:not(li) {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 15px 30px;
-
-  @include max(768) {
-    padding: 10px 20px;
-  }
-
-  @include max(425) {
-    padding: 10px;
-  }
-}
-
-// скрываем все слайды кроме первого
-// при отключенном JS
-// .slick-slide исправить на текущий класс
-.no-js .slick-slide:not(:first-child) {
-  display: none;
-}
-
-// скрываем слайдер до его инициализации
-// .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
-  visibility: hidden;
-}
-
-.card-slider-lg__list.slick-initialized {
-  visibility: visible;
+  padding: 0 30px;
 }
