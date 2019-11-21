@@ -1,0 +1,147 @@
+.menu-m {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  display: none;
+  overflow: auto;
+  width: 100%;
+  height: calc(100vh - 64px);
+  padding-bottom: 50px;
+  background-color: #32363e;
+}
+
+.menu-m__wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 320px;
+  margin: 0 auto 90px;
+  padding-top: 27px;
+  padding-left: 30px;
+}
+
+.menu-m__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 780px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-m__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.menu-m__item--parent {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-m__link {
+  font-family: $font;
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  transition: color .5s;
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.menu-m__link-btn {
+  position: absolute;
+  top: 4px;
+  right: 30px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: transform .5s;
+  &:hover {
+    transform: rotate(360deg);
+    &::before,
+    &::after {
+      background-color: $highlight;
+    }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    margin: auto;
+    content: '';
+    transition: .5s;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.submenu-m {
+  display: none;
+}
+
+.submenu-m__col {
+  max-width: 300px;
+  padding-top: 12px;
+}
+
+.submenu-m__col-title {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  padding-bottom: 11px;
+  text-decoration: none;
+  color: $highlight;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 64px;
+    height: 1px;
+    content: '';
+    background-color: $highlight;
+  }
+}
+
+.submenu-m__list {
+  max-width: 230px;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.submenu-m__item {
+  padding: 0;
+  list-style: none;
+}
+
+.submenu-m__link {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  color: #fff;
+}

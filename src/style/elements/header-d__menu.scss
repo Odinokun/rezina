@@ -1,0 +1,146 @@
+.menu-d {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.menu-d__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 780px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-d__item {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 15px;
+  list-style: none;
+}
+
+.menu-d__item--parent {
+  &:hover {
+    .submenu-d {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.menu-d__link {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  position: relative;
+  display: block;
+  transition: color .5s;
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: $highlight;
+    .menu-d__link-btn::before,
+    .menu-d__link-btn::after {
+      background-color: $highlight;
+    }
+  }
+}
+
+.menu-d__link-btn {
+  position: absolute;
+  top: 2px;
+  right: -23px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    margin: auto;
+    content: '';
+    transition: .5s;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.submenu-d {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 27px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  padding: 10px 15px 5px 15px;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  background-color: #32363e;
+  background-image: url('../img/menu-bg.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.submenu-d__col {
+  width: 33.33%;
+  padding: 10px 18px 15px 18px;
+}
+
+.submenu-d__col-title {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  padding-bottom: 14px;
+  transition: color .5s;
+  text-decoration: none;
+  color: #fff;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 64px;
+    height: 1px;
+    content: '';
+    background-color: $highlight;
+  }
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.submenu-d__list {
+  max-width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu-d__item {
+  padding: 0;
+  list-style: none;
+}
+
+.submenu-d__link {
+  font-family: $font;
+  font-size: 10px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+}

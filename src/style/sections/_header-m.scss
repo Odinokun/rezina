@@ -1,0 +1,242 @@
+.header-m {
+  display: none;
+  border-top: 2px solid $highlight;
+  background-color: #fff;
+  box-shadow: 0 8px 26px rgba(115, 175, 228, .09);
+
+  @include max(1120) {
+    display: block;
+  }
+}
+
+.header-m__top {
+  background-color: #fff;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+}
+
+//begin #CONTACTS
+
+.header-m__contacts-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    span {
+      text-decoration: none;
+    }
+  }
+  svg {
+    fill: #4e525c;
+    width: 23px;
+    height: 26px;
+    margin-right: 10px;
+
+    @include max(800) {
+      margin-right: 5px;
+    }
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    user-select: none;
+    text-decoration: underline;
+    color: #4e525c;
+
+    @include max(800) {
+      font-size: 10px;
+    }
+  }
+}
+
+.header-m__contacts-menu {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  right: -30px;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: #31363e;
+}
+
+.header-m__contacts-menu-list {
+  width: 215px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.header-m__contacts-menu-title {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px 0 5px 27px;
+  color: $highlight;
+}
+
+.header-m__contacts-menu-phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  text-decoration: none;
+  &:hover {
+    svg {
+      fill: $highlight;
+    }
+    span {
+      color: $highlight;
+    }
+  }
+  svg {
+    flex: none;
+    fill: #4e525c;
+    width: 16px;
+    height: 18px;
+    margin-right: 12px;
+    transition: fill .5s;
+  }
+  span {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color .5s;
+    color: #fff;
+  }
+}
+
+.header-m__contacts-menu-phone--weekend {
+  margin-bottom: 40px;
+  svg {
+    fill: #de5555;
+  }
+}
+
+.header-m__contacts-menu-adress {
+  display: flex;
+  margin-bottom: 75px;
+  text-decoration: none;
+  svg {
+    flex: none;
+    fill: #4e525c;
+    width: 12px;
+    height: 16px;
+    margin-right: 12px;
+    transition: fill .5s;
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+
+.header-m__contacts-menu-btn {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  .callback-btn {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    padding: 0 12px 0 7px;
+    text-decoration: none;
+  }
+}
+
+//end #CONTACTS
+
+//begin #LOGO
+
+.header-m__logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+  width: 105px;
+  height: 30px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+//end #LOGO
+
+//begin #SEARCH
+.header-m__search {
+  @include max(576) {
+    display: none;
+  }
+  .header-search__form {
+    &::before {
+      border-bottom: 28px solid #4e525c;
+    }
+  }
+
+  .header-search__input {
+    color: #fff;
+    background-color: #4e525c;
+
+    @include placeholder-color(#fff);
+  }
+
+  .header-search__submit {
+    background-color: #4e525c;
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+//end #SEARCH
+
+//begin #BURGER
+
+.burger-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger-icon__active {
+  width: 24px;
+  height: 24px;
+  &:hover {
+    svg {
+      fill: $highlight;
+    }
+  }
+  svg {
+    fill: #4e525c;
+    width: 24px;
+    height: 24px;
+    transition: fill .5s;
+  }
+}
+
+.burger-icon__close {
+  display: none;
+  width: 24px;
+  height: 24px;
+  &:hover {
+    svg {
+      fill: $highlight;
+      transform: rotate(360deg);
+    }
+  }
+  svg {
+    fill: #4e525c;
+    width: 24px;
+    height: 24px;
+    transition: all .5s;
+  }
+}
+
+//end #BURGER

@@ -1,0 +1,38 @@
+.callback-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  padding: 0 22px 0 7px;
+  transition: .5s;
+  background-color: #ffc540;
+  &:hover {
+    background-color: #ffac14;
+    &::before {
+      border-bottom: 38px solid #ffac14;
+    }
+  }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    width: 0;
+    height: 0;
+    content: '';
+    transition: .5s;
+    border-bottom: 38px solid #ffc540;
+    border-left: 30px solid transparent;
+  }
+  svg {
+    fill: #31363e;
+    width: 19px;
+    height: 21px;
+    margin-right: 10px;
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 500;
+    color: #31363e;
+  }
+}
