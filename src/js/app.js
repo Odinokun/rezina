@@ -9,4 +9,7 @@ $(function() {
   // begin Popup
   require('./modules/popup')();
 
+  // begin mobile menu
+  require('./modules/mobile-menu')();
+
 });

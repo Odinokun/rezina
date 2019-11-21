@@ -1,0 +1,110 @@
+.banner-section {
+  min-height: 355px;
+  background-image: url('../img/bg-banner.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .container {
+    position: relative;
+    padding-top: 38px;
+    padding-bottom: 54px;
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: 40px;
+      width: 72px;
+      height: 59px;
+      content: '';
+      background-image: url('../img/bg-page-header-title.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include max(800) {
+        left: -5px;
+      }
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  max-width: 600px;
+  margin-left: 40px;
+  padding: 35px 35px 40px 65px;
+  background-image: url('../img/banner.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+
+  @include max(800) {
+    margin-left: 0;
+  }
+  @include max(576) {
+    padding: 35px 25px 20px 30px;
+  }
+  &::before {
+    position: absolute;
+    right: 95px;
+    bottom: -15px;
+    width: 72px;
+    height: 59px;
+    content: '';
+    background-image: url('../img/bg-page-header-title.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include max(525) {
+      right: -10px;
+      bottom: -10px;
+    }
+  }
+  span {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #fff;
+
+    @include max(576) {
+      font-size: 16px;
+    }
+  }
+}
+
+.banner__title {
+  font-family: $font;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 17px;
+  color: #fff;
+
+  @include max(576) {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+}
+
+.banner__btn {
+  font-family: $font;
+  font-size: 17px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding-top: 8px;
+  padding-right: 45px;
+  padding-bottom: 8px;
+  padding-left: 17px;
+  transition: color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #31363e;
+  background-image: url('../img/bg-btn.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: cover;
+  &:hover {
+    color: #fff;
+  }
+}

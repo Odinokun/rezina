@@ -2,21 +2,36 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
+
+  @include max(576) {
+    display: none;
+  }
 }
 
 .breadcrumbs__item {
   position: relative;
+  margin-right: 10px;
+  padding-right: 15px;
   list-style: none;
   &::after {
     font-size: 12px;
-    margin: 0 3px 0 4px;
-    content: '/';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin: auto;
+    content: '';
+    background-color: #f5f5fa;
   }
   &:last-child {
     .breadcrumbs__link {
       text-decoration: none;
       pointer-events: none;
+      color: #ccc;
     }
     &::after {
       display: none;
@@ -25,9 +40,13 @@
 }
 
 .breadcrumbs__link {
+  font-family: $font;
   font-size: 12px;
+  font-weight: 400;
   white-space: nowrap;
-  color: #403549;
+  text-decoration: underline;
+  color: #fff;
+
   &:hover {
     text-decoration: none;
   }

@@ -1,0 +1,58 @@
+//begin header
+header.header-d
+  //begin header-d__top
+  .header-d__top
+    .container
+      //begin header-d__logo
+      a(href="#").header-d__logo
+        img(src="assets/img/logo.png" alt="Rezina 182")
+      //end header-d__logo
+
+      //begin header-d__phones
+      .header-d__phones
+        //begin header-d__phone
+        a(href="tel:+78123242210").header-d__phone
+          +svg('phone')
+          .header-d__phone-text
+            span +7 (812) 324-22-10
+            span рабочие дни  с 09:00 по 17:30
+        //end header-d__phone
+        //begin header-d__phone
+        a(href="tel:+78123242263").header-d__phone
+          +svg('phone')
+          .header-d__phone-text
+            span +7 (812) 324-22-63
+        //end header-d__phone
+        //begin header-d__phone
+        a(href="tel:+79219526118").header-d__phone.header-d__phone--weekend
+          +svg('phone')
+          .header-d__phone-text
+            span +7 (921) 952-61-18
+            span по выходным
+        //end header-d__phone
+
+      //end header-d__phones
+
+      //begin header-d__btn
+      .header-d__btn
+        include ../elements/callback-btn
+      //end header-d__btn
+
+
+  //end header-d__top
+
+  //begin header-d__bottom
+  .header-d__bottom
+    .container
+      include ../elements/header-d__menu
+
+      //begin header-d__search
+      .header-d__search.header-search
+        form.header-search__form
+          input(type='search' placeholder='Поиск').header-search__input
+          .header-search__submit
+            input(type='submit')
+            +svg('magnify')
+      //end header-d__search
+  //end header-d__bottom
+//end header

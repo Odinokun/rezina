@@ -5,16 +5,21 @@
 @import 'core/base';
 
 //elements
-//@import 'elements/breadcrumbs';
+@import 'elements/breadcrumbs';
 //@import 'elements/burger';
 //@import 'elements/pagination';
 //@import 'elements/popup';
-//@import 'elements/slickBase';
-// @import 'elements/stickyHeader';
+@import 'elements/slickBase';
+@import 'elements/callback-btn';
+@import 'elements/header-d__menu';
+@import 'elements/header-m__menu';
 
 //section
 @import 'sections/footer';
-@import 'sections/header';
+@import 'sections/header-d';
+@import 'sections/header-m';
+@import 'sections/page-header';
+@import 'sections/banner';
 
 //pages
 @import 'pages/index';

@@ -1,0 +1,65 @@
+//begin header
+header.header-m
+  //begin header-m__top
+  .header-m__top
+    .container
+      //begin header-m__contacts
+      .header-m__contacts
+        .header-m__contacts-btn
+          +svg('phone')
+          span Контакты
+        .header-m__contacts-menu
+          .header-m__contacts-menu-list
+            h3.header-m__contacts-menu-title Рабочие дни  с 09:00 по 17:30
+            a(href="tel:+78123242210").header-m__contacts-menu-phone
+              +svg('phone')
+              span +7 (812) 324-22-10
+            a(href="tel:+78123242263").header-m__contacts-menu-phone
+              +svg('phone')
+              span +7 (812) 324-22-63
+
+            h3.header-m__contacts-menu-title По выходным
+            a(href="tel:+79219526118").header-m__contacts-menu-phone.header-m__contacts-menu-phone--weekend
+              +svg('phone')
+              span +7 (921) 952-61-18
+
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-m__contacts-menu-adress
+              +svg('marker')
+              span
+                |Санкт-Петербург,
+                br
+                |шоссе Революции, д.84,
+                br
+                |первый этаж, офис №104
+
+            .header-m__contacts-menu-btn
+              include ../elements/callback-btn
+      //end header-m__contacts
+
+      //begin header-m__logo
+      a(href="#").header-m__logo
+        img(src="assets/img/logo.png" alt="Rezina 182")
+      //end header-m__logo
+
+      //begin header-m__search
+      .header-m__search.header-search
+       form.header-search__form
+         input(type='search' placeholder='Поиск').header-search__input
+         .header-search__submit
+           input(type='submit')
+           +svg('magnify')
+      //end header-m__search
+
+      //begin burger
+      .burger-icon
+        .burger-icon__active
+          +svg('burger')
+        .burger-icon__close
+          +svg('close')
+      //end burger
+
+      //begin header-m__menu
+      include ../elements/header-m__menu
+      //end header-m__menu
+  //end header-m__top
+//end header
