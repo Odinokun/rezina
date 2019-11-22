@@ -6,7 +6,6 @@
 
 //elements
 @import 'elements/breadcrumbs';
-//@import 'elements/burger';
 //@import 'elements/pagination';
 //@import 'elements/popup';
 @import 'elements/slickBase';
@@ -15,7 +14,8 @@
 @import 'elements/header-m__menu';
 
 //section
-@import 'sections/footer';
+@import 'sections/footer-d';
+@import 'sections/footer-m';
 @import 'sections/header-d';
 @import 'sections/header-m';
 @import 'sections/page-header';

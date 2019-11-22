@@ -1,0 +1,51 @@
+//begin footer-d
+.footer-d
+  .container
+    //begin footer-d__item
+    .footer-d__item
+      a(href="/").footer-d__logo
+        img(src="assets/img/logo.png" alt="logo")
+      .footer-d__low-links
+        a(href="#") Политика конфидециальности
+        a(href="#") Пользовательское соглашение
+    //end footer-d__item
+
+    //begin footer-d__item
+    .footer-d__item.footer-d__item--contacts
+      h3.footer-d__item-title Контакты
+      a(href="#").footer-d__item-adress
+        +svg('marker')
+        span Санкт-Петербург, шоссе Революции, д.84, первый этаж, офис №104
+
+      .footer-d__item-phones
+        +svg('phone')
+        a(href="tel:+78123242210") +7 (812) 324-22-10
+        a(href="tel:+78123243310") +7 (812) 324-33-10
+        a(href="tel:+79219526118") +7 (921) 952-61-18
+    //end footer-d__item
+
+    //begin footer-d__item
+    .footer-d__item.footer-d__item--info
+      h3.footer-d__item-title Информация
+      .footer-d__info
+        a(href="#") Реквизиты
+        a(href="#") Карта проезда
+        a(href="#") Вопрос-ответ
+    //end footer-d__item
+
+    //begin footer-d__right
+    .footer-d__right
+      include ../elements/callback-btn
+      a(href="mailto:sale@rezina812.ru").footer-d__mail
+        +svg('mail')
+        span sale@rezina812.ru
+      a(href="#").footer-d__copyright © 2010-2019 «Резина812 ПКФ»
+      a(href="#").footer-d__copyright Сделано в «ProShift»
+
+
+
+
+    //end footer-d__right
+
+
+//end footer-d

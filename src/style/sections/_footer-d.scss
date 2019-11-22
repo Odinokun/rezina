@@ -1,0 +1,229 @@
+.footer-d {
+  background-color: #31363e;
+  background-image: url('../img/bg-footer.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(1120) {
+    background-image: none;
+  }
+  @include max(767) {
+    display: none;
+  }
+  .container {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include max(1120) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.footer-d__item {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    width: 285px;
+    margin-left: 20px;
+    padding-top: 17px;
+
+    @include max(800) {
+      width: 230px;
+    }
+  }
+}
+
+.footer-d__logo {
+  display: block;
+  width: 161px;
+  height: 45px;
+  margin-bottom: 45px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.footer-d__low-links {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-family: $font;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 22px;
+    transition: color .5s;
+    text-decoration: underline;
+    color: #fff;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.footer-d__item--contacts {
+  width: 320px;
+}
+
+.footer-d__item-title {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 5px;
+  color: $highlight;
+}
+
+.footer-d__item-adress {
+  position: relative;
+  display: inline-block;
+  max-width: 270px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  svg {
+    position: absolute;
+    top: 2px;
+    left: -23px;
+    fill: #4e525c;
+    width: 12px;
+    height: 16px;
+  }
+  span {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 400;
+    transition: color .5s;
+    color: #fff;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.footer-d__item-phones {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  svg {
+    position: absolute;
+    top: 2px;
+    left: -22px;
+    fill: #4e525c;
+    width: 12px;
+    height: 14px;
+  }
+  a {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 400;
+    transition: color .5s;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.footer-d__info {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    transition: color .5s;
+    text-decoration: underline;
+    color: #fff;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+//begin #RIGHT
+.footer-d__right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: auto;
+
+  @include max(1120) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 30px;
+  }
+
+  .callback-btn {
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    @include max(1120) {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.footer-d__mail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transform: translateX(-10px);
+  text-decoration: none;
+
+  @include max(1120) {
+    padding-right: 20px;
+    padding-left: 20px;
+    transform: translateX(0);
+  }
+  svg {
+    fill: $highlight;
+    width: 16px;
+    height: 11px;
+    margin-right: 10px;
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 400;
+    color: $highlight;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-d__copyright {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  display: block;
+  transition: color .5s;
+  transform: translateX(-30px);
+  text-decoration: none;
+  color: #fff;
+
+  @include max(1120) {
+    margin-bottom: 15px;
+    transform: translateX(0);
+  }
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+//end #RIGHT
