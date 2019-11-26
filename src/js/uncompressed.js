@@ -5,8 +5,9 @@
 
 $(document).ready(function ($) {
   pageWidget([
-    'index',
-    'inner'
+    'info',
+    'inner',
+    'index'
     ]);
 });
 

@@ -172,6 +172,7 @@ ol > *:not(li) {
     @include max(576) {
       padding-left: 25px;
     }
+
     li {
       font-family: $font;
       font-size: 14px;
@@ -202,6 +203,7 @@ ol > *:not(li) {
   @include max(576) {
     font-size: 28px;
   }
+
   &::before {
     position: absolute;
     right: 0;

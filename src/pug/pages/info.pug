@@ -1,0 +1,73 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rezina 812'
+  - var description = 'Rezina 812'
+  - var pageHeaderTitle = 'Заголовок'
+  - var ogtitle     = 'Rezina 812'
+
+block content
+  .main-wrap
+    include ../sections/header-d
+    include ../sections/header-m
+
+    //begin content
+    main.main
+      include ../sections/page-header
+      .info
+        .container
+          h2 Информация для покупателя
+          .text-row
+            p Многих клиентов интересует такая характеристика как вес технической резины ТМКЩ, МБС и АМС. Зависит он от ингредиентов, которые входят в  состав. Различные добавки изменяют состав резины, благодаря чему ее можно применять как в агрессивных, так и в обычных условиях. Стоимость резиновых техпластин может изменяться в зависит от некоторых факторов, таких как плотность (вес) изделия и размер. Если вас интересует точная цена, то просто свяжитесь с нашими менеджерами, и они подробно вас проконсультируют по всему ассортименту.
+
+          .info__list
+            //begin info-item
+            .info__item.info-item
+              .info-item__icon.info-item__icon--01
+                +svg('info-01')
+              .info-item__info
+                h3.info-item__title Наш блог
+                span.info-item__text Новости компании и полезная информация для покупателей и технологов.
+                a(href="#").info-item__link
+                  span Читать далее
+                  +svg('right-arrow')
+            //end info-item
+
+            //begin info-item
+            .info__item.info-item
+              .info-item__icon.info-item__icon--02
+                +svg('info-02')
+              .info-item__info
+                h3.info-item__title Презентации
+                span.info-item__text Презентации о компании и производимых товарах.
+                a(href="#").info-item__link
+                  span Читать далее
+                  +svg('right-arrow')
+            //end info-item
+
+            //begin info-item
+            .info__item.info-item
+              .info-item__icon.info-item__icon--03
+                +svg('info-03')
+              .info-item__info
+                h3.info-item__title Технические спецификации
+                span.info-item__text Полезная информация для инженеров и технологов.
+                a(href="#").info-item__link
+                  span Читать далее
+                  +svg('right-arrow')
+            //end info-item
+
+            //begin info-item
+            .info__item.info-item
+              .info-item__icon.info-item__icon--04
+                +svg('info-04')
+              .info-item__info
+                h3.info-item__title Сертификаты
+                span.info-item__text Необходлимая документация о сертификации продукции.
+                a(href="#").info-item__link
+                  span Читать далее
+                  +svg('right-arrow')
+            //end info-item
+    //end content
+    include ../sections/footer-d
+    include ../sections/footer-m
