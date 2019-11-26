@@ -1,0 +1,130 @@
+.index-slider {
+  position: relative;
+  margin-bottom: 0 !important;
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    bottom: 25px;
+    fill: #fff;
+    width: 25px;
+    height: 16px;
+  }
+  .prev {
+    right: calc(50% + 50px);
+    left: auto;
+  }
+  .next {
+    left: calc(50% + 50px);
+  }
+  .slick-dots {
+    bottom: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+  }
+  .slick-dots li {
+    width: 9px;
+    height: 14px;
+    transition: height .5s;
+    background-color: #fff;
+    &.slick-active {
+      width: 9px;
+      height: 22px;
+      background-color: $highlight;
+    }
+  }
+}
+
+.index-slider__item {
+  position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: 406px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.index-slider__item-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.index-slider__item-bg--desktop {
+  display: block;
+
+  @include max(800) {
+    display: none;
+  }
+}
+
+.index-slider__item-bg--mobile {
+  display: none;
+
+  @include max(800) {
+    display: block;
+  }
+}
+
+.index-slider__item-text {
+  max-width: 600px;
+  padding-left: 15px;
+
+  @include max(800) {
+    padding-left: 0;
+  }
+}
+
+.index-slider__title {
+  font-family: $font;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 20px;
+  color: #31363e;
+
+  @include max(800) {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  @include max(525) {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.index-slider__subtitle {
+  font-family: $font;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #4e525c;
+
+  @include max(800) {
+    font-size: 20px;
+  }
+  @include max(525) {
+    font-size: 18px;
+  }
+}
+
+.index-slider__btn {
+  min-width: 210px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
