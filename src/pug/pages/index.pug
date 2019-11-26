@@ -6,12 +6,18 @@ block variables
   - var ogtitle     = 'Rezina 812'
 
 block content
-  .main-wrap.no-js.index
+  .main-wrap
     include ../sections/header-d
     include ../sections/header-m
 
     //begin content
     main.main
+      include ../sections/index-top
+      include ../sections/index-catalog
+      include ../sections/banner
+      include ../sections/index-about
+      include ../sections/index-advantages
     //end content
 
+    include ../sections/footer-d
     include ../sections/footer-m

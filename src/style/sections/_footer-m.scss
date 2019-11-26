@@ -1,46 +1,16 @@
 .footer-m {
   display: none;
   background-color: #31363e;
-  //  background-color: #31363e;
-  //  background-image: url('../img/bg-footer.jpg');
-  //  background-repeat: no-repeat;
-  //  background-position: 50% 50%;
-  //  background-size: cover;
-  //
-  //  @include max(1120) {
-  //    background-image: none;
-  //  }
 
   @include max(767) {
     display: block;
   }
   .container {
-    //    display: flex;
     padding-top: 35px;
     padding-bottom: 20px;
-    //
-    //    @include max(1120) {
-    //      justify-content: center;
-    //      flex-wrap: wrap;
-    //    }
   }
 }
 
-//.footer-m__item {
-//  display: flex;
-//  flex-direction: column;
-//
-//  &:first-child {
-//    width: 285px;
-//    margin-left: 20px;
-//    padding-top: 17px;
-//
-//    @include max(800) {
-//      width: 230px;
-//    }
-//  }
-//}
-//
 .footer-m__logo {
   display: block;
   width: 161px;

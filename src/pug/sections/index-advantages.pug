@@ -1,0 +1,30 @@
+mixin index-advantages__item(title)
+  .index-advantages__item
+    .index-advantages__icon
+      +svg('star')
+    .index-advantages__info
+      h3.index-advantages__title #{title}
+      span.index-advantages__text В штате компании работают профессионалы, которые одинаково хорошо справятся с послестроительной уборкой и с очищением поверхностей.
+
+//begin index-advantages
+.index-advantages
+  .container
+    h2.section-title Наши преимущества
+
+  //begin index-advantages__items
+  .index-advantages__items
+    .container
+      //begin index-advantages__item
+      +index-advantages__item('Преимущество 1')
+      //end index-advantages__item
+      //begin index-advantages__item
+      +index-advantages__item('Преимущество 2')
+      //end index-advantages__item
+      //begin index-advantages__item
+      +index-advantages__item('Преимущество 3')
+      //end index-advantages__item
+      //begin index-advantages__item
+      +index-advantages__item('Преимущество 4')
+      //end index-advantages__item
+  //end index-advantages__items
+//end index-advantages
