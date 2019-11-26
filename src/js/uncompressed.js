@@ -5,6 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'samples',
     'info',
     'inner',
     'index'

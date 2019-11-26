@@ -7,7 +7,6 @@
 //elements
 @import 'elements/breadcrumbs';
 //@import 'elements/pagination';
-//@import 'elements/popup';
 @import 'elements/slickBase';
 @import 'elements/callback-btn';
 @import 'elements/header-d__menu';
@@ -26,7 +25,9 @@
 @import 'sections/index-advantages';
 @import 'sections/index-application';
 @import 'sections/index-articles';
+@import 'sections/popup';
 
 //pages
 @import 'pages/index';
 @import 'pages/info';
+@import 'pages/samples';
