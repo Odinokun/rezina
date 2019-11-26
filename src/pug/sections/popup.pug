@@ -1,0 +1,20 @@
+mixin sample-popup(popup, title)
+  div(class='popup' id='sample-' + popup + '')
+    .popup__close
+      +svg('close')
+    .popup__body
+      .popup__slider
+        .popup__img(style='background-image:url("assets/img/index-slider-01.jpg")')
+        .popup__img(style='background-image:url("assets/img/index-slider-02.jpg")')
+        .popup__img(style='background-image:url("assets/img/index-slider-03.jpg")')
+      .popup__text
+        h3.popup__title #{title}
+        .popup__descr
+          span Компания ООО "Резина812 ПКФ" предлагает техпластины резиновые ТМКЩ, МБС и АМС высокого качества и по демократичным ценам.
+          span Данные изделия различаются по маркам (ТМКЩ, АМС, МБС); классам (1,2): 1 - для работы под давлением свыше 0,1 МПА (1,0 кг/см2), и 2 - под давлением до 0,1 МПА (1,0 кг/см²); видам  (формовые и неформовые); типам (I, II); степени твердости средня/
+
+.popup__layer
+
++sample-popup('01', 'Строительная техника')
++sample-popup('02', 'Производство')
++sample-popup('03', 'Станки')
