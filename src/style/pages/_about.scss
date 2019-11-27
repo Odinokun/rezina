@@ -1,0 +1,180 @@
+
+.about__descr {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+
+  @include max(800) {
+    flex-direction: column;
+  }
+
+  .index-about__descr-left {
+    padding-left: 0;
+  }
+}
+
+//begin #ADVANTAGES
+
+.about__advantages {
+  padding-top: 50px;
+}
+
+.about__advantages-title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 25px;
+  color: #31363e;
+}
+
+.about__advantages-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 35px 15px;
+  background-color: #f9f9f9;
+
+  @include max(680) {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.about__advantages-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+
+  @include max(680) {
+    width: 33.33%;
+    margin-bottom: 15px;
+  }
+  @include max(425) {
+    width: 50%;
+  }
+}
+
+.about__advantages-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 64px;
+  margin-bottom: 10px;
+  svg {
+    fill: $highlight;
+  }
+}
+
+.about__advantages-item--01 svg {
+  width: 64px;
+  height: 64px;
+}
+
+.about__advantages-item--02 svg {
+  width: 40px;
+  height: 50px;
+}
+
+.about__advantages-item--03 svg {
+  width: 56px;
+  height: 64px;
+}
+
+.about__advantages-item--04 svg {
+  width: 63px;
+  height: 64px;
+}
+
+.about__advantages-item--05 svg {
+  width: 55px;
+  height: 64px;
+}
+
+.about__advantages-text {
+  text-align: center;
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    color: #4e525c;
+  }
+}
+
+//end #ADVANTAGES
+
+//begin #PARTNERS
+.about__partners {
+  margin-bottom: 30px;
+
+  @include max(425) {
+    margin-bottom: 0;
+  }
+}
+
+.about__partners-title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 25px;
+  color: #31363e;
+}
+
+.about__partners-list {
+  display: flex;
+  justify-content: space-between;
+
+  @include max(800) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.about__partners-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(20% - 24px);
+
+  @include max(800) {
+    width: calc(33.33% - 30px);
+    margin-bottom: 30px;
+  }
+  @include max(576) {
+    width: 50%;
+  }
+  img {
+    display: block;
+    max-width: calc(100% - 20px);
+  }
+}
+
+//end #PARTNERS
+
+//begin #CERTIFICATES
+.about__certificates {
+  .certificates__list {
+    @include max(576) {
+      justify-content: center;
+    }
+  }
+  .index-catalog__footer {
+    margin-bottom: 20px;
+  }
+}
+
+.about__certificates-title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 25px;
+  color: #31363e;
+}
+
+//end #CERTIFICATES
