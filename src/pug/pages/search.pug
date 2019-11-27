@@ -1,0 +1,60 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rezina 812'
+  - var description = 'Rezina 812'
+  - var pageHeaderTitle = 'Поиск'
+  - var ogtitle     = 'Rezina 812'
+
+block content
+  .main-wrap
+    include ../sections/header-d
+    include ../sections/header-m
+
+    //begin content
+    main.main
+      include ../sections/page-header
+
+      //begin search
+      .search
+        .container
+          //begin search__form
+          .search__form
+            .search__form-left
+              +svg('magnify')
+            form.search__form-right
+              .search__form-input-wrap
+                input(type='search').search-form__input-search
+                .search__form-input-submit
+                  input(type='submit')
+                  span Найти
+          //end search__form
+
+          //begin search__request
+          .search__request
+            span.search__request-text Поиск по запросу:
+            span.search__request-value резинотехнические изделия
+          //end search__request
+            
+          //begin search__result
+          .search__result
+            ol.search__result-list
+              li.search__result-item
+                a(href="#").search__result-link Производство резинотехнических изделий
+                span.search__result-text Каталог
+              li.search__result-item
+                a(href="#").search__result-link Производство резинотехнических изделий
+                span.search__result-text Каталог
+              li.search__result-item
+                a(href="#").search__result-link Производство резинотехнических изделий
+                span.search__result-text Каталог
+              li.search__result-item
+                a(href="#").search__result-link Производство резинотехнических изделий
+                span.search__result-text Каталог
+          //end search__result
+      //end search
+    //end content
+
+    include ../sections/footer-d
+    include ../sections/footer-m
+    include ../sections/popup
