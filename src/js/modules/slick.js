@@ -49,6 +49,32 @@ module.exports = function() {
       }
     ]
   });
+
+  $('.service-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    cssEase: 'linear',
+    prevArrow: "<div class='prev'><svg viewBox=\"0 0 224.3 407.4\"><polygon points=\"224.3,21.2 203.1,0 0,203.7 203.1,407.4 224.3,386.3 42.4,203.7 \"/></svg></div>",
+    nextArrow: "<div class='next'><svg viewBox=\"0 0 224.3 407.4\"><polygon points=\"21.2,0 0,21.2 181.9,203.7 0,386.3 21.2,407.4 224.3,203.7 \"/></svg></div>",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 526,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
   // end Slick slider
 
 };
