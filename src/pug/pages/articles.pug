@@ -1,0 +1,48 @@
+extends ../_template
+
+mixin articles__item()
+  .articles__item
+    a(href="#" style='background-image:url("assets/img/index-article.jpg")').articles__item-img
+    .articles__item-info
+      a(href="#").articles__item-title Новое оборудование
+      span.articles__item-text Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и
+      span.articles__item-date 28.06.2019
+
+block variables
+  - var title       = 'Rezina 812'
+  - var description = 'Rezina 812'
+  - var pageHeaderTitle = 'Новости'
+  - var ogtitle     = 'Rezina 812'
+
+block content
+  .main-wrap
+    include ../sections/header-d
+    include ../sections/header-m
+
+    //begin content
+    main.main
+      include ../sections/page-header
+      .container-sm
+        //begin articles__list
+        .articles__list
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+          +articles__item
+        //end articles__list
+
+        include ../elements/pagination
+
+        h2.main-title Производство резинотехнических изделий
+        .text-row
+          p Оптимально и эффективно помогать заказчику, обеспечивая его необходимыми резинотехническими изделиями, полимерами и другими материалами. Мы достигаем этого командой сотрудников, профессионализм которых позволяет компании «Резина812 ПКФ» быть лучшей для каждого заказчика.
+    //end content
+    include ../sections/footer-d
+    include ../sections/footer-m
+    include ../sections/popup
