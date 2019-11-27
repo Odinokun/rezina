@@ -1,0 +1,126 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rezina 812'
+  - var description = 'Rezina 812'
+  - var pageHeaderTitle = 'О компании'
+  - var ogtitle     = 'Rezina 812'
+
+block content
+  .main-wrap
+    include ../sections/header-d
+    include ../sections/header-m
+
+    //begin content
+    main.main
+      include ../sections/page-header
+
+      .about
+        .container-sm
+          h2 Производство резиновых техпластин
+          .text-row
+            p Компания ООО "Резина812 ПКФ" предлагает техпластины резиновые ТМКЩ, МБС и АМС высокого качества и по демократичным ценам.
+            p Данные изделия различаются по маркам (ТМКЩ, АМС, МБС); классам (1,2): 1 - для работы под давлением свыше 0,1 МПА (1,0 кг/см2), и 2 - под давлением до 0,1 МПА (1,0 кг/см²); видам  (формовые и неформовые); типам (I, II); степени твердости (мягкая, средняя, повышенная).
+
+          .about__descr
+            .index-about__descr-left
+              h3.index-about__descr-title Основная цель компании:
+              span Оптимально и эффективно помогать заказчику, обеспечивая его необходимыми резинотехническими изделиями, полимерами и другими материалами.
+              span Мы достигаем этого командой сотрудников, профессионализм которых позволяет компании «Резина812 ПКФ» быть лучшей для каждого заказчика.
+            .index-about__descr-right
+              img(src="assets/img/index-about-right.png" alt="picture")
+
+          //begin about__advantages
+          .about__advantages
+            h2.about__advantages-title «Резина812 ПКФ» это:
+            .about__advantages-list
+              .about__advantages-item.about__advantages-item--01
+                .about__advantages-icon
+                  +svg('adv-01')
+                .about__advantages-text
+                  span
+                    |Собственное
+                    br
+                    |производство
+
+              .about__advantages-item.about__advantages-item--02
+                .about__advantages-icon
+                  +svg('adv-02')
+                .about__advantages-text
+                  span
+                    |8 лет
+                    br
+                    |на рынке
+
+              .about__advantages-item.about__advantages-item--03
+                .about__advantages-icon
+                  +svg('adv-03')
+                .about__advantages-text
+                  span
+                    | Широкий
+                    br
+                    | ассортимент
+
+              .about__advantages-item.about__advantages-item--04
+                .about__advantages-icon
+                  +svg('adv-04')
+                .about__advantages-text
+                  span
+                    | Приятные
+                    br
+                    | цены
+
+              .about__advantages-item.about__advantages-item--05
+                .about__advantages-icon
+                  +svg('adv-05')
+                .about__advantages-text
+                  span
+                    | Личный
+                    br
+                    | менеджер
+          //end about__advantages
+
+          //begin about__partners
+          .about__partners
+            h2.about__partners-title Наши партнеры
+            .about__partners-list
+              .about__partners-item
+                img(src="assets/img/partner.jpg" alt="picture")
+              .about__partners-item
+                img(src="assets/img/partner.jpg" alt="picture")
+              .about__partners-item
+                img(src="assets/img/partner.jpg" alt="picture")
+              .about__partners-item
+                img(src="assets/img/partner.jpg" alt="picture")
+              .about__partners-item
+                img(src="assets/img/partner.jpg" alt="picture")
+          //end about__partners
+
+          //begin about__certificates
+          .about__certificates
+            h2.about__certificates-title Сертификаты
+            .certificates__list
+              .certificates__item
+                a(href="assets/img/certificate-lg.jpg" data-fancybox="certificates").certificates__img
+                  img(src="assets/img/certificate-sm.jpg" alt="picture")
+                span.certificates__title ГОСТ 34245
+              .certificates__item
+                a(href="assets/img/certificate-lg.jpg" data-fancybox="certificates").certificates__img
+                  img(src="assets/img/certificate-sm.jpg" alt="picture")
+                span.certificates__title ГОСТ 34245
+              .certificates__item
+                a(href="assets/img/certificate-lg.jpg" data-fancybox="certificates").certificates__img
+                  img(src="assets/img/certificate-sm.jpg" alt="picture")
+                span.certificates__title ГОСТ 34245
+
+            //begin index-catalog__footer
+            .index-catalog__footer
+              a(href="#").index-catalog__footer-link
+                span Все документы
+                +svg('right-arrow')
+            //end index-catalog__footer
+          //end about__certificates
+    //end content
+
+    include ../sections/footer-d
+    include ../sections/footer-m
