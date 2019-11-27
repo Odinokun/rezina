@@ -1,0 +1,123 @@
+.article {
+  padding-top: 27px;
+  .container {
+    max-width: 1030px;
+  }
+}
+
+.article__img {
+  position: relative;
+  margin-bottom: 25px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.article__date {
+  position: absolute;
+  bottom: 27px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 38px;
+  text-align: center;
+  background-color: $highlight;
+
+  @include max(576) {
+    position: relative;
+    bottom: 0;
+    margin-top: 15px;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    content: '';
+    border-bottom: 38px solid transparent;
+    border-left: 28px solid $highlight;
+  }
+  span {
+    font-family: $font;
+    font-size: 17px;
+    font-weight: 500;
+    color: #31363e;
+  }
+}
+
+.article__body {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.article__title {
+  font-family: $font;
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0;
+  color: #31363e;
+}
+
+.article__text {
+  p {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #4e525c;
+  }
+}
+
+.article__return {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  &:hover {
+    span {
+      color: $highlight;
+    }
+  }
+  svg {
+    fill: $highlight;
+    width: 25px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  span {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color .5s;
+    text-decoration: underline;
+    color: #31363e;
+  }
+}
+
+//begin #POPULAR
+.article__popular {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  background-color: #f8f8f8;
+  .container {
+    max-width: 970px;
+  }
+}
+
+.article__popular-title {
+  font-family: $font;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: #31363e;
+}
+
+//end #POPULAR
