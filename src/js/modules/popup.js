@@ -3,9 +3,9 @@ module.exports = function() {
   // begin popup open
   $('.popup-open').on('click', function(e) {
     e.preventDefault();
+    $('.popup').removeClass('active');
 
     var linkVal = $(this).data('popup');
-    console.log(linkVal);
 
     $('body').addClass('no-scroll');
     $(linkVal).addClass('active');
