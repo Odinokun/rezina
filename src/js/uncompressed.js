@@ -5,6 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'services',
     'article',
     'articles',
     'certificates',

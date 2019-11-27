@@ -5,11 +5,11 @@
   height: 38px;
   padding: 0 22px 0 7px;
   transition: .5s;
-  background-color: #ffc540;
+  background-color: $highlight;
   &:hover {
-    background-color: #ffac14;
+    background-color: $highlight-hov;
     &::before {
-      border-bottom: 38px solid #ffac14;
+      border-bottom: 38px solid $highlight-hov;
     }
   }
   &::before {
@@ -20,7 +20,7 @@
     height: 0;
     content: '';
     transition: .5s;
-    border-bottom: 38px solid #ffc540;
+    border-bottom: 38px solid $highlight;
     border-left: 30px solid transparent;
   }
   svg {
@@ -34,5 +34,6 @@
     font-size: 14px;
     font-weight: 500;
     color: #31363e;
+    pointer-events: none;
   }
 }

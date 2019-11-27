@@ -1,0 +1,150 @@
+.services__search {
+  margin-bottom: 20px;
+  padding-top: 30px;
+  .container {
+    max-width: 970px;
+  }
+}
+
+.search-form {
+  display: flex;
+  background-color: #4e525c;
+
+  @include max(800) {
+    flex-direction: column;
+  }
+}
+
+.search-form__left {
+  display: flex;
+  align-items: center;
+  flex: none;
+  min-height: 63px;
+
+  @include max(800) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  svg {
+    fill: $highlight;
+    width: 22px;
+    height: 24px;
+    margin: 0 23px;flex: none;
+
+    @include max(800) {
+      margin: 0 23px 0 0;
+    }
+  }
+  span {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-right: 13px;
+    white-space: nowrap;
+    color: #fff;
+
+    @include max(800) {
+      padding-right: 0;
+    }
+    @include max(525) {
+      white-space: normal;
+    }
+  }
+}
+
+.search-form__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-right: 30px;
+
+  @include max(800) {
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+}
+
+.search-form__input-wrap {
+  position: relative;
+  display: flex;
+  flex: none;
+  width: 100%;
+  height: 32px;
+  background-color: #396;
+}
+
+.search-form__input-search {
+  width: 100%;
+  height: 32px;
+  border: none;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.search-form__input-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 106px;
+  height: 32px;
+  cursor: pointer;
+  transition: .5s;
+  text-align: center;
+  background-color: $highlight;
+  &:hover {
+    background-color: $highlight-hov;
+    &::before {
+      border-right: 23px solid $highlight-hov;
+    }
+  }
+  &::before {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    content: '';
+    transition: .5s;
+    border-top: 32px solid transparent;
+    border-right: 23px solid $highlight;
+  }
+  span {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 5px;
+    color: #31363e;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    opacity: 0;
+  }
+}
+
+.services__search-title {
+  font-family: $font;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: 25px;
+  color: #31363e;
+}
+
+
+.services__footer-text{
+  padding-top: 15px;
+  padding-bottom: 25px;
+  .container {
+    max-width: 970px;
+  }
+}

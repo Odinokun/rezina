@@ -1,0 +1,62 @@
+extends ../_template
+
+mixin articles__item()
+  .articles__item
+    a(href="#" style='background-image:url("assets/img/index-article.jpg")').articles__item-img
+    .articles__item-info
+      a(href="#").articles__item-title Новое оборудование
+      span.articles__item-text Не следует, однако забывать, что начало повседневной работы по формированию позиции способствует подготовки и
+      span.articles__item-date 28.06.2019
+
+block variables
+  - var title       = 'Rezina 812'
+  - var description = 'Rezina 812'
+  - var pageHeaderTitle = 'Технические плаcтины'
+  - var ogtitle     = 'Rezina 812'
+
+block content
+  .main-wrap
+    include ../sections/header-d
+    include ../sections/header-m
+
+    //begin content
+    main.main
+      include ../sections/page-header
+
+      //begin services__search
+      .services__search
+        .container
+          //begin search-form
+          .services__search-form.search-form
+            .search-form__left
+              +svg('magnify')
+              span Найдите интересуещее вас изделие
+            form.search-form__right
+              .search-form__input-wrap
+                input(type='search').search-form__input-search
+                .search-form__input-submit
+                  input(type='submit')
+                  span Найти
+          //end search-form
+          h2.services__search-title Производство резинотехнических изделий
+          .text-row
+            p Компания ООО "Резина812 ПКФ" предлагает техпластины резиновые ТМКЩ, МБС и АМС высокого качества и по демократичным ценам.
+            p Данные изделия различаются по маркам (ТМКЩ, АМС, МБС); классам (1,2): 1 - для работы под давлением свыше 0,1 МПА (1,0 кг/см2), и 2 - под давлением до 0,1 МПА (1,0 кг/см²); видам  (формовые и неформовые); типам (I, II); степени твердости (мягкая, средняя, повышенная).
+
+      //end services__search
+
+      include ../sections/services-catalog
+
+    include ../sections/banner
+
+    .services__footer-text
+      .container
+        .text-row
+          p Неформовые техпластины как правило выпускаются стандартных размеров: листовые шириной  500 -1400 мм., рулонные 1600 - 20000 мм в зависимости от толщины изделия.
+          p Резиновые техпластины применяется во многих областях и сферах деятельности, в качестве прокладок и уплотнителей неподвижных соединений.
+          p В пищевой промышленности применяются  техпластины, выдерживающие давление до 0,6 МПа и сохраняющие свои свойства при низких (до - 30 ) и высоких (до +100) температурных показателях. Существует несколько видов данных изделий, применение которых зависит от вида соприкасающихся с ними продуктов
+    //end content
+
+    include ../sections/footer-d
+    include ../sections/footer-m
+    include ../sections/popup
