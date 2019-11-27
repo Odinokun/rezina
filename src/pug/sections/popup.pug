@@ -15,6 +15,47 @@ mixin sample-popup(popup, title)
 
 .popup__layer
 
+//begin sample-popup-01
 +sample-popup('01', 'Строительная техника')
+//end sample-popup-01
+//begin sample-popup-02
 +sample-popup('02', 'Производство')
+//end sample-popup-02
+//begin sample-popup-03
 +sample-popup('03', 'Станки')
+//end sample-popup-03
+
+//begin popup-01
+.popup.popup-sm#popup-01
+  .popup__close
+    +svg('close')
+  .popup-form
+    h3.popup-form__title Заказать звонок
+    form.contacts-feedback__form
+      input(placeholder='Ваше имя').contacts-feedback__input
+      input(placeholder='Телефон').contacts-feedback__input
+      input(placeholder='E-mail').contacts-feedback__input
+
+      //begin contacts-feedback__row
+      .contacts-feedback__row
+        label.contacts-feedback__agree
+          input(type='checkbox' checked)
+          span Я соглашаюсь с условиями обработки персональных данных и политикой конфиденциальности
+
+        .contacts-feedback__submit.popup-open(data-popup='#popup-02')
+          input(type='submit')
+          span Отправить
+        //end contacts-feedback__row
+//end popup-01
+
+//begin popup-02
+.popup.popup-sm#popup-02
+  .popup__close
+    +svg('close')
+  h3.popup__body-title Сообщение отправлено
+  span.popup-body__subtitle Ваш личный менеджер свяжется с вами в течение 10 минут
+  .popup-body__ok-wrap
+    a(href="#").popup-body__ok
+      span OK
+//end popup-02
+

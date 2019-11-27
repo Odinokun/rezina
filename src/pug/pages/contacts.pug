@@ -1,0 +1,173 @@
+extends ../_template
+
+block variables
+  - var title       = 'Rezina 812'
+  - var description = 'Rezina 812'
+  - var pageHeaderTitle = 'Контакты'
+  - var ogtitle     = 'Rezina 812'
+
+block content
+  .main-wrap
+    include ../sections/header-d
+    include ../sections/header-m
+
+    //begin content
+    main.main
+      include ../sections/page-header
+
+      //begin contacts
+      .contacts
+        .container
+          //begin contacts-top
+          .contacts-top
+            //begin contacts-top__items
+            .contacts-top__items
+              //begin contacts-top__item
+              .contacts-top__item.contacts-top__item--adress
+                .contacts-top__item-header
+                  +svg('marker-2')
+                  h3.contacts-top__item-title Адрес
+                .contacts-top__item-body
+                  a(href="#" target="_blank" rel="nofollow noopener noreferrer") Санкт-Петербург, Шоссе Революции, д.84, первый этаж, офис №104
+                  span Пн-Пт с 09:00 до 17:30 без обеда
+              //end contacts-top__item
+
+              //begin contacts-top__item
+              .contacts-top__item.contacts-top__item--phone
+                .contacts-top__item-header
+                  +svg('phone-2')
+                  h3.contacts-top__item-title Телефон
+                .contacts-top__item-body
+                  a(href="tel:+78123242210") +7 (812) 324-22-10
+                  a(href="tel:+78123242263") +7 (812) 324-22-63
+                  a(href="tel:+79219526118") +7 (921) 952-61-18
+              //end contacts-top__item
+
+              //begin contacts-top__item
+              .contacts-top__item.contacts-top__item--fax
+                .contacts-top__item-header
+                  +svg('fax')
+                  h3.contacts-top__item-title Факс
+                .contacts-top__item-body
+                  a(href="tel:+78123242263") +7 (812) 324-22-63
+              //end contacts-top__item
+
+              //begin contacts-top__item
+              .contacts-top__item.contacts-top__item--email
+                .contacts-top__item-header
+                  +svg('mail-2')
+                  h3.contacts-top__item-title E-mail
+                .contacts-top__item-body
+                  a(href="mailto:sale@rezina812.ru") sale@rezina812.ru
+              //end contacts-top__item
+
+              a(href="#").contacts-top__download-item
+                +svg('file')
+                span скачать реквизиты
+            //end contacts-top__items
+
+            .contacts-top__map
+              iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac168d629f277274c43d0859f7be592ed16c1876e6bd553e88eaf5dede767b564&amp;source=constructor" width="100%" height="420" frameborder="0")
+          //end contacts-top
+
+          //begin contacts-managers
+          .contacts-managers
+            h3.contacts-managers__title Наши менеджеры
+
+            //begin contacts-managers__list
+            .contacts-managers__list
+              //begin contacts-managers__item
+              a(href="mailto:prod@rezina812.ru").contacts-managers__item
+                .contacts-managers__icon
+                  +svg('manager')
+                .contacts-managers__info
+                  h4.contacts-managers__name Вера Королева
+                  span.contacts-managers__mail prod@rezina812.ru
+              //end contacts-managers__item
+
+              //begin contacts-managers__item
+              a(href="mailto:rezina@rezina812.ru").contacts-managers__item
+                .contacts-managers__icon
+                  +svg('manager')
+                .contacts-managers__info
+                  h4.contacts-managers__name Татьяна Ракитина
+                  span.contacts-managers__mail rezina@rezina812.ru
+              //end contacts-managers__item
+
+              //begin contacts-managers__item
+              a(href="mailto:info@rezina812.ru").contacts-managers__item
+                .contacts-managers__icon
+                  +svg('manager')
+                .contacts-managers__info
+                  h4.contacts-managers__name Ольга Кирикова
+                  span.contacts-managers__mail info@rezina812.ru
+              //end contacts-managers__item
+
+              //begin contacts-managers__item
+              a(href="mailto:snab@rezina812.ru").contacts-managers__item
+                .contacts-managers__icon
+                  +svg('manager')
+                .contacts-managers__info
+                  h4.contacts-managers__name Мария Орлова
+                  span.contacts-managers__mail snab@rezina812.ru
+              //end contacts-managers__item
+                
+                
+            //end contacts-managers__list
+
+
+
+          //end contacts-managers
+      //end contacts
+
+      //begin contacts-ps
+      .contacts-ps
+        .container
+          .contacts-ps__logo
+            img(src="assets/img/contacts-ps-logo.png" alt="logo")
+          .contacts-ps__text
+            span Мы также работаем со всеми регинами РФ.
+            span
+              | Если вы региональный представитель или заказчик, направьте
+              | ваше обращение на почту:
+              =' '
+              a(href="mailto:rti@rezina812.ru") rti@rezina812.ru
+      //end contacts-ps
+        
+      //begin contacts-feedback
+      .contacts-feedback
+        .container
+          .contacts-feedback__wrap
+            //begin contacts-feedback__left
+            .contacts-feedback__left
+              h3.contacts-feedback__title Открыты для вопросов и предложений
+              span.contacts-feedback__subtitle Оставьте ваш вопрос или предложение, и мы обязательно на него ответитим.
+            //end contacts-feedback__left
+
+            //begin contacts-feedback__right
+            .contacts-feedback__right
+              form.contacts-feedback__form
+                input(placeholder='Ваше имя').contacts-feedback__input
+                input(placeholder='Телефон').contacts-feedback__input
+                input(placeholder='E-mail').contacts-feedback__input
+                textarea(placeholder='Сообщение').contacts-feedback__textarea
+
+                //begin contacts-feedback__row
+                .contacts-feedback__row
+                  label.contacts-feedback__agree
+                    input(type='checkbox' checked)
+                    span Я соглашаюсь с условиями обработки персональных данных и политикой конфиденциальности
+
+                  .contacts-feedback__submit.popup-open(data-popup='#popup-01')
+                    input(type='submit')
+                    span Отправить
+                //end contacts-feedback__row
+            //end contacts-feedback__right
+
+
+      //end contacts-feedback
+    //end content
+
+    include ../sections/footer-d
+    include ../sections/footer-m
+    include ../sections/popup
