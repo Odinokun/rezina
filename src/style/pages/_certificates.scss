@@ -1,0 +1,42 @@
+.certificates__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 33px 33px 0 33px;
+  background-color: #f9f9f9;
+
+  @include max(425) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.certificates__item {
+  width: 33.33%;
+  margin-bottom: 33px;
+  padding: 0 33px;
+
+  @include max(840) {
+    padding: 0 15px;
+  }
+  @include max(576) {
+    width: 50%;
+  }
+}
+
+.certificates__img {
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.certificates__title {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  color: #31363e;
+}
